@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahma Nyari - Design Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #f0f0f0;
+      z-index: 100;
+      padding: 1rem 2rem;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: #1a1a1a;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    .scroll-indicator {
+      display: inline-block;
+      width: 2px;
+      height: 40px;
+      background: #ddd;
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: #1a1a1a;
+      animation: scroll 2s infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(20px); opacity: 0; }
+    }
+
+    /* Gallery Section */
+    .gallery {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      background: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-item iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      display: block;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 4rem;
+    }
+
+    .footer p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header {
+        padding: 1rem;
+      }
+
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav {
+        gap: 1.5rem;
+      }
+
+      .hero {
+        padding: 6rem 1rem 3rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .gallery {
+        padding: 1rem;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .gallery-item iframe {
+        height: 300px;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="#" class="logo">Rahma Nyari</a>
+      <nav class="nav">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Design Gallery</h1>
+    <p>A curated collection of UX design, marketing, and product design work</p>
+    <div class="scroll-indicator"></div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="gallery-grid">
+      <!-- First 6 items: Links 16, 17, 18, 19, 24, 26 -->
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGpYJg5PeM/MX2Gp_ULJK8YKhXM-OXqlw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGpYn9AY8g/e69mi5EV7vDYl9DOGUu-Ew/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGoLnETx0M/9aVT5MlNPLV3mS8vk_bL-A/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGoLfEDUXI/G87CsSXDnD8X68FjfVhQhw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGlQFbtURg/r7udpW8qj100AujSK8-pdA/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiFBzHz5Q/H5UoaH4yFt5wm_hKr31VMw/view?embed"></iframe>
+      </div>
+      <!-- Links 22, 26, 12 after first 6 -->
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGlXFi1lII/UPGaboN2gsdamDEB-mAKXw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiFBzHz5Q/H5UoaH4yFt5wm_hKr31VMw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiRnO37u0/YMCcwqGcPdsaaqcT3vK4lw/view?embed"></iframe>
+      </div>
+      <!-- Remaining items in original order -->
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGqv4V-dqE/mRVqUT8lAIrJSIa2w5wSGQ/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGjYx1N4FQ/fhqK_2hgDUgmZNemaPmJYg/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGrZJoTyFA/9EGVxlQ22Fp9TJgAvumMwQ/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGqD65Q1q0/z26GCGnICFzIw9pJ-WVeMA/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGoyIUVIgs/KYF2B2oIoz6PiexPWwNncA/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGoyE7ezno/buYriXaKFeem-RS9tkrF1Q/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGo11QdHFw/Dlvuxyoc_a0JvtDsXniioA/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGorlIpWwg/Mv25B1BZ7np3pQ4CztYi8Q/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGmrOYeMXc/0WxnMX_VNKlgjMccrwHZ3Q/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGmANxcLcA/JAB38YpYhPy_qnci0MeuBw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGmzRxlymM/dFynOaAyDw_8ILTzZO_kjg/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiRnO37u0/YMCcwqGcPdsaaqcT3vK4lw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGkyS-JYxQ/VqlM60KmxYY9l7GZB6xb9g/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGrP_kSO3U/ukZtww_lhe_3V92RHEDDDw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGp5_8pVJ8/Wse7tDCytMdXjAxBFgXLmA/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGna8LTLoQ/OwLBsOgC0rQm0Jys3PuP6g/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGnagzfdrc/K3hlFgbM17C181KQul8uYg/watch?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGm8b2QMBU/Ha3I3E4F9eV2Z2IdVOyn-w/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGlXFi1lII/UPGaboN2gsdamDEB-mAKXw/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiWHTevx8/bU0S2O6SNDynUkN7GTQ9sg/view?embed"></iframe>
+      </div>
+      <div class="gallery-item">
+        <iframe src="https://www.canva.com/design/DAGiF-L0D4k/6OOdwr2Gc_Sbf9Zj9X7lww/watch?embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Rahma Nyari. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+      }
+    });
+  </script>
+</body>
+</html>
